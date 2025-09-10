@@ -136,6 +136,8 @@ const Appointment = () => {
     if (!formData.lastName.trim()) errors.push('Last name is required');
     if (!formData.email.trim()) errors.push('Email is required');
     if (!formData.phone.trim()) errors.push('Phone number is required');
+    if (!formData.petName.trim()) errors.push('Pet name is required');
+    if (!formData.petType.trim()) errors.push('Pet type is required');
     if (!formData.date) errors.push('Appointment date is required');
     if (!formData.time) errors.push('Appointment time is required');
     if (!formData.doctor) errors.push('Doctor selection is required');
@@ -258,6 +260,17 @@ This email was sent automatically from your website appointment form via PMI IT 
 
       // Use a simple, reliable email service
       console.log('Sending email automatically...');
+      console.log('📋 Form Data Being Sent:', {
+        ownerName: `${formData.firstName} ${formData.lastName}`,
+        email: formData.email,
+        phone: `${formData.countryCode} ${formData.phone}`,
+        petName: formData.petName,
+        petType: formData.petType,
+        appointmentDate: formattedDate,
+        appointmentTime: formData.time,
+        veterinarian: formData.doctor,
+        message: formData.message || 'No additional message'
+      });
       
       // Create a simple email payload
       const emailData = {
@@ -267,6 +280,8 @@ This email was sent automatically from your website appointment form via PMI IT 
         text: emailContent,
         name: `${formData.firstName} ${formData.lastName}`,
         phone: `${formData.countryCode} ${formData.phone}`,
+        pet_name: formData.petName,
+        pet_type: formData.petType,
         appointment_date: formattedDate,
         appointment_time: formData.time,
         doctor: formData.doctor,
@@ -282,6 +297,8 @@ This email was sent automatically from your website appointment form via PMI IT 
         formDataToSend.append('name', emailData.name);
         formDataToSend.append('email', emailData.from);
         formDataToSend.append('phone', emailData.phone);
+        formDataToSend.append('pet_name', formData.petName);
+        formDataToSend.append('pet_type', formData.petType);
         formDataToSend.append('appointment_date', emailData.appointment_date);
         formDataToSend.append('appointment_time', emailData.appointment_time);
         formDataToSend.append('doctor', emailData.doctor);
@@ -375,6 +392,8 @@ This email was sent automatically from your website appointment form via PMI IT 
           email: '',
           countryCode: '+973',
           phone: '',
+          petName: '',
+          petType: '',
           date: '',
           time: '',
           doctor: '',
@@ -657,7 +676,7 @@ This email was sent automatically from your website appointment form via PMI IT 
                 <h3>Contact Information</h3>
                 <div className="contact-info">
                   <p><strong>Phone:</strong> +973 1234 5678</p>
-                  <p><strong>Email:</strong> info@dentalcareclinic.com</p>
+                  <p><strong>Email:</strong> info@vetcareclinic.com</p>
                   <p><strong>Address:</strong> Manama, Bahrain</p>
                 </div>
               </div>
