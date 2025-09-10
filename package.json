@@ -1,18 +1,19 @@
 {
-  "name": "dental-care-clinic",
+  "name": "vet-care-clinic",
   "version": "1.0.0",
   "private": true,
-  "description": "Professional dental care clinic website providing comprehensive oral health solutions in Bahrain",
+  "description": "Professional veterinary care clinic website providing comprehensive pet health solutions in Bahrain",
   "keywords": [
-    "dental",
+    "vet",
+    "veterinary",
     "clinic",
     "healthcare",
     "bahrain",
-    "dentist",
-    "oral-health"
+    "pet-care",
+    "animal-health"
   ],
-  "author": "Dental Care Clinic",
-  "homepage": "https://dental-care-clinic.vercel.app",
+  "author": "Vet Care Clinic",
+  "homepage": "https://vet-care-clinic.vercel.app",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@testing-library/dom": "^10.4.1",

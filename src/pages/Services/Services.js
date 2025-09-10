@@ -7,7 +7,6 @@ import {
   FaMicroscope, 
   FaSyringe, 
   FaUserMd,
-  FaStethoscope,
   FaXRay,
   FaExclamationTriangle
 } from 'react-icons/fa';
