@@ -103,9 +103,14 @@ const Home = () => {
               <Link to="/services" className="hero-button hero-button-primary">
                 Our Services
               </Link>
-              <Link to="/appointment" className="hero-button hero-button-secondary">
+              <a 
+                href="https://vet.pmi-it-solutions.com/veterinarian-appointment" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hero-button hero-button-secondary"
+              >
                 Book Appointment
-              </Link>
+              </a>
             </div>
           </div>
         </div>

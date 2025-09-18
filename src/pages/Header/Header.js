@@ -81,14 +81,6 @@ const Header = () => {
                 Contact
               </Link>
             </li>
-            <li className="header-nav-item">
-              <Link
-                to="/appointment"
-                className={`header-nav-link ${location.pathname === '/appointment' ? 'header-nav-link-active' : ''}`}
-              >
-                Appointment
-              </Link>
-            </li>
           </ul>
         </nav>
 
@@ -151,15 +143,6 @@ const Header = () => {
                 onClick={closeMobileMenu}
               >
                 Contact
-              </Link>
-            </li>
-            <li className="mobile-nav-item">
-              <Link
-                to="/appointment"
-                className={`mobile-nav-link ${location.pathname === '/appointment' ? 'mobile-nav-link-active' : ''}`}
-                onClick={closeMobileMenu}
-              >
-                Appointment
               </Link>
             </li>
           </ul>

@@ -171,6 +171,10 @@
   box-shadow: 0 10px 25px rgba(255, 213, 79, 0.4);
 }
 
+.hero-button-secondary:focus {
+  outline: none;
+}
+
 /* Statistics Section Styles */
 .stats-section {
   background: #f8f9fa;
